@@ -33,6 +33,9 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm ci
       - run: npm run build
+      - name: Update version
+        if: github.event_name == 'workflow_dispatch'
+        run: npm version ${{ github.event.inputs.version }} --no-git-tag-version
       - run: npm publish ./dist
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
