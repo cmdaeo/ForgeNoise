@@ -1,6 +1,6 @@
 {
   "name": "forge-noise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A high-performance noise generation library",
   "main": "forgeNoise.js",
   "scripts": {
