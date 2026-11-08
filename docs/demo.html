@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo - ForgeNoise</title>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/x-icon" sizes="96x96" href="assets/icons/main-96.ico">
+  <link rel="icon" type="image/x-icon" sizes="128x128" href="assets/icons/main-128.ico">
+  <link rel="icon" type="image/x-icon" sizes="256x256" href="assets/icons/main-256.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/main-256.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="brand">ForgeNoise</a>
+      <a href="demo.html">Demo</a>
+      <a href="api.html">API</a>
+      <a href="benchmark.html">Benchmark</a>
+      <a href="https://github.com/cmdaeo/forgeNoise" class="gh">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="demo-wrap">
+      <div class="demo-controls">
+        <label>Algorithm</label>
+        <select id="algo">
+          <option value="simplex2d">Simplex 2D</option>
+          <option value="simplex3d" selected>Simplex 3D</option>
+          <option value="simplex4d">Simplex 4D</option>
+          <option value="perlin2d">Perlin 2D</option>
+          <option value="perlin3d">Perlin 3D</option>
+          <option value="value2d">Value 2D</option>
+          <option value="value3d">Value 3D</option>
+          <option value="worley2d">Worley 2D</option>
+          <option value="worley3d">Worley 3D</option>
+          <option value="fractal2d">Fractal fBm 2D</option>
+          <option value="fractal3d">Fractal fBm 3D</option>
+          <option value="ridged2d">Fractal Ridged 2D</option>
+          <option value="turbulence2d">Fractal Turbulence 2D</option>
+          <option value="warp2d">Domain Warp 2D</option>
+          <option value="warp3d">Domain Warp 3D</option>
+          <option value="os2f2d">OpenSimplex2F 2D</option>
+          <option value="os2s2d">OpenSimplex2S 2D</option>
+        </select>
+
+        <label>Seed</label>
+        <input type="number" id="seed" value="1337">
+
+        <label>Zoom <span id="zoomVal">3.0</span></label>
+        <input type="range" id="zoom" min="0.5" max="20" step="0.1" value="3">
+
+        <label>Speed <span id="speedVal">0.30</span></label>
+        <input type="range" id="speed" min="0" max="2" step="0.01" value="0.3">
+
+        <label>Octaves <span id="octVal">4</span></label>
+        <input type="range" id="octaves" min="1" max="8" step="1" value="4">
+
+        <label>Resolution</label>
+        <select id="res">
+          <option value="1">1× (full)</option>
+          <option value="2" selected>2× (half)</option>
+          <option value="3">3× (third)</option>
+          <option value="4">4× (quarter)</option>
+        </select>
+
+        <label>Palette</label>
+        <select id="palette">
+          <option value="thermal" selected>Thermal</option>
+          <option value="grayscale">Grayscale</option>
+          <option value="viridis">Viridis</option>
+          <option value="terrain">Terrain</option>
+        </select>
+
+        <div class="row" style="margin-top:20px">
+          <button class="btn primary" id="pause" style="width:100%">Pause</button>
+        </div>
+      </div>
+
+      <div class="demo-canvas-wrap">
+        <canvas id="demo-canvas"></canvas>
+        <div class="demo-hud" id="hud">
+          <div>fps <span class="v" id="fps">-</span></div>
+          <div>frame <span class="v" id="frame">-</span> ms</div>
+          <div>px/s <span class="v" id="pps">-</span></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="dist/forgeNoise.min.js"></script>
+  <script src="demo.js"></script>
+</body>
+</html>

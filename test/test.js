@@ -1,32 +1,32 @@
 const assert = require('assert');
 const ForgeNoise = require('../dist/forgeNoise.min.js');
 
-describe('ForgeNoise', function() {
+describe('ForgeNoise', function () {
     this.timeout(5000);
     const noise = new ForgeNoise(12345);
 
-    describe('Basic Noise Generation', function() {
-        it('should generate 2D noise within [-1, 1]', function() {
+    describe('Basic Noise Generation', function () {
+        it('should generate 2D noise within [-1, 1]', function () {
             for (let i = 0; i < 1000; i++) {
                 const value = noise.generate2D(Math.random() * 100, Math.random() * 100);
                 assert(value >= -1 && value <= 1);
             }
         });
 
-        it('should generate 3D noise within [-1, 1]', function() {
+        it('should generate 3D noise within [-1, 1]', function () {
             for (let i = 0; i < 1000; i++) {
                 const value = noise.generate3D(Math.random() * 100, Math.random() * 100, Math.random() * 100);
                 assert(value >= -1 && value <= 1);
             }
         });
 
-        it('should be consistent for same input', function() {
+        it('should be consistent for same input', function () {
             const value1 = noise.generate2D(1.5, 2.5);
             const value2 = noise.generate2D(1.5, 2.5);
             assert.strictEqual(value1, value2);
         });
 
-        it('should differ with different seeds', function() {
+        it('should differ with different seeds', function () {
             const noise = new ForgeNoise(12345);
             const noise2 = new ForgeNoise(54321);
             const value1 = noise.generate2D(0.5, 0.5);
@@ -35,8 +35,8 @@ describe('ForgeNoise', function() {
         });
     });
 
-    describe('Simplex Noise', function() {
-        it('should generate within [-1, 1]', function() {
+    describe('Simplex Noise', function () {
+        it('should generate within [-1, 1]', function () {
             const noise = new ForgeNoise(12345);
             for (let i = 0; i < 100; i++) {
                 const x = Math.random() * 100;
@@ -46,7 +46,7 @@ describe('ForgeNoise', function() {
             }
         });
 
-        it('should be consistent', function() {
+        it('should be consistent', function () {
             const noise = new ForgeNoise(12345);
             const x = 1.5, y = 2.5;
             const value1 = noise.generateSimplex2D(x, y);
@@ -55,8 +55,8 @@ describe('ForgeNoise', function() {
         });
     });
 
-    describe('Worley Noise', function() {
-        it('should generate within [-1, 1]', function() {
+    describe('Worley Noise', function () {
+        it('should generate within [-1, 1]', function () {
             const noise = new ForgeNoise(12345);
             for (let i = 0; i < 100; i++) {
                 const x = Math.random() * 100;
@@ -66,7 +66,7 @@ describe('ForgeNoise', function() {
             }
         });
 
-        it('should be consistent', function() {
+        it('should be consistent', function () {
             const noise = new ForgeNoise(12345);
             const x = 1.5, y = 2.5;
             const value1 = noise.generateWorley2D(x, y);
@@ -75,8 +75,8 @@ describe('ForgeNoise', function() {
         });
     });
 
-    describe('Domain Warping', function() {
-        it('should generate within [-1, 1]', function() {
+    describe('Domain Warping', function () {
+        it('should generate within [-1, 1]', function () {
             const noise = new ForgeNoise(12345);
             for (let i = 0; i < 100; i++) {
                 const x = Math.random() * 100;
@@ -96,8 +96,8 @@ describe('ForgeNoise', function() {
         });*/
     });
 
-    describe('Fractional Brownian Motion', function() {
-        it('should generate within [-1, 1]', function() {
+    describe('Fractional Brownian Motion', function () {
+        it('should generate within [-1, 1]', function () {
             const noise = new ForgeNoise(12345);
             for (let i = 0; i < 100; i++) {
                 const x = Math.random() * 100;
@@ -107,7 +107,7 @@ describe('ForgeNoise', function() {
             }
         });
 
-        it('should respect octaves', function() {
+        it('should respect octaves', function () {
             const noise = new ForgeNoise(12345);
             const x = 0.5, y = 0.5;
             const value1 = noise.generateFractal2D(x, y, { octaves: 1 });
@@ -116,8 +116,8 @@ describe('ForgeNoise', function() {
         });
     });
 
-    describe('Ridged Multifractal', function() {
-        it('should generate within [-1, 1]', function() {
+    describe('Ridged Multifractal', function () {
+        it('should generate within [-1, 1]', function () {
             const noise = new ForgeNoise(12345);
             for (let i = 0; i < 100; i++) {
                 const x = Math.random() * 100;
@@ -127,7 +127,7 @@ describe('ForgeNoise', function() {
             }
         });
 
-        it('should respect gain', function() {
+        it('should respect gain', function () {
             const noise = new ForgeNoise(12345);
             const x = 0.5, y = 0.5;
             const value1 = noise.generateFractal2D(x, y, { octaves: 4, ridged: true, persistence: 0.5 });
@@ -136,15 +136,15 @@ describe('ForgeNoise', function() {
         });
     });
 
-    describe('Range Mapping', function() {
-        it('should map 2D to [0, 1]', function() {
+    describe('Range Mapping', function () {
+        it('should map 2D to [0, 1]', function () {
             for (let i = 0; i < 1000; i++) {
                 const value = noise.generate2D01(Math.random() * 100, Math.random() * 100);
                 assert(value >= 0 && value <= 1);
             }
         });
 
-        it('should map Simplex to [0, 1]', function() {
+        it('should map Simplex to [0, 1]', function () {
             const noise = new ForgeNoise(12345);
             for (let i = 0; i < 100; i++) {
                 const x = Math.random() * 100;
@@ -154,7 +154,7 @@ describe('ForgeNoise', function() {
             }
         });
 
-        it('should map Worley to [0, 1]', function() {
+        it('should map Worley to [0, 1]', function () {
             const noise = new ForgeNoise(12345);
             for (let i = 0; i < 100; i++) {
                 const x = Math.random() * 100;
@@ -165,8 +165,8 @@ describe('ForgeNoise', function() {
         });
     });
 
-    describe('Performance', function() {
-        it('should generate 2D noise efficiently', function() {
+    describe('Performance', function () {
+        it('should generate 2D noise efficiently', function () {
             const start = performance.now();
             for (let i = 0; i < 10000; i++) noise.generate2D(Math.random() * 100, Math.random() * 100);
             const time = (performance.now() - start) / 10000;
@@ -174,7 +174,7 @@ describe('ForgeNoise', function() {
             assert(time < 1);
         });
 
-        it('should generate Simplex noise efficiently', function() {
+        it('should generate Simplex noise efficiently', function () {
             const noise = new ForgeNoise(12345);
             const start = performance.now();
             for (let i = 0; i < 10000; i++) {
@@ -185,25 +185,43 @@ describe('ForgeNoise', function() {
         });
     });
 
-    describe('Edge Cases', function() {
-        it('should handle integers', function() {
+    describe('Edge Cases', function () {
+        it('should handle integers', function () {
             const value = noise.generate2D(1, 1);
             assert(typeof value === 'number' && !isNaN(value));
         });
 
-        it('should handle negatives', function() {
+        it('should handle negatives', function () {
             const value = noise.generate2D(-1.5, -2.5);
             assert(value >= -1 && value <= 1);
         });
 
-        it('should handle zeros', function() {
+        it('should handle zeros', function () {
             const value = noise.generate2D(0, 0);
             assert(typeof value === 'number' && !isNaN(value));
         });
 
-        it('should handle large coordinates', function() {
+        it('should handle large coordinates', function () {
             const value = noise.generate2D(1e6, 1e6);
             assert(value >= -1 && value <= 1);
+        });
+    });
+
+    describe('Simplex 4D', function () {
+        it('should generate within [-1, 1]', function () {
+            const n = new ForgeNoise(12345);
+            for (let i = 0; i < 1000; i++) {
+                const v = n.generateSimplex4D(
+                    Math.random() * 100, Math.random() * 100,
+                    Math.random() * 100, Math.random() * 100);
+                assert(v >= -1 && v <= 1);
+            }
+        });
+        it('should be deterministic', function () {
+            const n = new ForgeNoise(12345);
+            assert.strictEqual(
+                n.generateSimplex4D(1.5, 2.5, 3.5, 4.5),
+                n.generateSimplex4D(1.5, 2.5, 3.5, 4.5));
         });
     });
 });
