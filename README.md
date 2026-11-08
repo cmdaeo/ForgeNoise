@@ -3,7 +3,6 @@
 **Procedural noise for JavaScript - fast, dependency-free, seedable.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
-[![Node](https://img.shields.io/node/v/forge-noise?color=green)](./package.json)
 
 [**Live Demo**](https://cmdaeo.github.io/forgeNoise/demo.html) ·
 [**API Reference**](https://cmdaeo.github.io/forgeNoise/api.html) ·
