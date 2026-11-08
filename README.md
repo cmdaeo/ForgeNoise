@@ -83,7 +83,7 @@ noise.warp2D(x, y, { warpStrength: 2, warpScale: 1.5 });
 - **Seedable** - `new ForgeNoise(seed)` reproduces exactly; `reseed(seed)` re-uses the instance.
 - **No allocations** on the hot path. Optional `out` arrays for the few methods that could otherwise allocate.
 - **Uniform output range** - `[-1, 1]` everywhere, `[0, 1]` for `*01` variants.
-- **No dependencies**, single file, ~15 KB minified.
+- **No dependencies**, single file.
 - **UMD** - works with a plain `<script>` tag, or `require()` / `import` if you bundle it.
 
 ## Benchmarks
