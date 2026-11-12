@@ -1,0 +1,49 @@
+{
+  "samples": 800,
+  "integration_radius": 0.35,
+  "disk_samples": 48,
+  "rows": [
+    {
+      "algorithm": "perlin2d",
+      "mean_iso": 0.3011812859574537,
+      "std_iso": 0.21000349752862604,
+      "q05_iso": 0.039809901789342114,
+      "q95_iso": 0.7122676006719533,
+      "dir_concentration_4": 0.29517039360864206,
+      "dir_concentration_6": 0.03335892558408048,
+      "samples": 800
+    },
+    {
+      "algorithm": "simplex2d",
+      "mean_iso": 0.34775069052519164,
+      "std_iso": 0.18982885556381474,
+      "q05_iso": 0.09689219653257415,
+      "q95_iso": 0.727111826234059,
+      "dir_concentration_4": 0.09754984457173704,
+      "dir_concentration_6": 0.16985803643414857,
+      "samples": 800
+    },
+    {
+      "algorithm": "os2f_2d",
+      "mean_iso": 0.3712058671268212,
+      "std_iso": 0.196226181580647,
+      "q05_iso": 0.11143481842031548,
+      "q95_iso": 0.754853872061175,
+      "dir_concentration_4": 0.06704338665823298,
+      "dir_concentration_6": 0.2351440525903237,
+      "samples": 800
+    },
+    {
+      "algorithm": "os2s_2d",
+      "mean_iso": 0.32731319496841693,
+      "std_iso": 0.1983481838192034,
+      "q05_iso": 0.061532751438208105,
+      "q95_iso": 0.7135120323382292,
+      "dir_concentration_4": 0.06339282220735414,
+      "dir_concentration_6": 0.22363547253865212,
+      "samples": 800
+    }
+  ],
+  "hypothesis_A_perlin_lower_iso": true,
+  "hypothesis_B_direction_ordering": true
+}

@@ -1,6 +1,6 @@
 'use strict';
 const path = require('path');
-const ForgeNoise = require('../dist/forgeNoise.min.js'); // adjust if needed
+const ForgeNoise = require('../dist/ForgeNoise.min.js'); // adjust if needed
 
 module.exports = [
   // ═══════════════════════════════════════════════════════════════════

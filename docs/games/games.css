@@ -1,0 +1,186 @@
+/* ═══════════════════════════════════════════════════════════
+   Games hub
+   ═══════════════════════════════════════════════════════════ */
+.hub-main { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+.hub-title {
+  font-size: 48px; font-weight: 700; letter-spacing: -0.02em;
+  background: linear-gradient(120deg, var(--accent), #ff9a3c);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hub-sub { color: var(--fg-dim); font-size: 17px; margin-top: 8px; margin-bottom: 40px; }
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.hub-card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s, border-color 0.15s, box-shadow 0.15s;
+}
+.hub-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: 0 20px 40px -20px rgba(255, 92, 51, 0.4);
+  text-decoration: none;
+}
+.hub-emoji { font-size: 44px; line-height: 1; margin-bottom: 14px; }
+.hub-card h3 { font-size: 22px; margin-bottom: 8px; color: var(--fg); }
+.hub-card p { color: var(--fg-dim); font-size: 14px; line-height: 1.5; margin-bottom: 16px; }
+.hub-cta { color: var(--accent); font-weight: 600; font-size: 14px; }
+
+/* ═══════════════════════════════════════════════════════════
+   Shared game shell
+   ═══════════════════════════════════════════════════════════ */
+.game-body { display: flex; flex-direction: column; min-height: 100vh; overflow: hidden; }
+.game-body header { flex-shrink: 0; }
+.game-main { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+.game-stage {
+  position: relative; flex: 1; min-height: 0;
+  background: #0a0a0c; overflow: hidden; touch-action: none; user-select: none;
+}
+.game-stage canvas { display: block; width: 100%; height: 100%; }
+.game-note {
+  padding: 10px 18px; font-size: 12px; color: var(--fg-dim);
+  text-align: center; background: var(--bg-alt); border-top: 1px solid var(--border);
+}
+
+/* Shared HUD */
+.g-hud {
+  position: absolute; top: 0; left: 0; right: 0; padding: 14px 18px;
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 10px;
+  pointer-events: none; font-family: var(--mono); flex-wrap: wrap;
+}
+.g-hud-group { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.g-pill {
+  background: rgba(10, 11, 16, 0.82); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+  padding: 8px 14px; font-size: 12px; color: var(--fg);
+  display: flex; align-items: center; gap: 8px; pointer-events: auto;
+}
+.g-label { color: var(--fg-dim); text-transform: uppercase; letter-spacing: 0.06em; font-size: 10px; }
+
+.g-msg {
+  position: absolute; top: 72px; left: 50%; transform: translateX(-50%);
+  background: rgba(10, 11, 16, 0.82); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 8px;
+  padding: 8px 16px; font-size: 13px; color: var(--fg);
+  pointer-events: none; transition: opacity 0.4s, transform 0.3s; white-space: nowrap;
+}
+.g-msg.fade { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+
+.g-over {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.72); backdrop-filter: blur(8px);
+  opacity: 0; pointer-events: none; transition: opacity 0.25s; z-index: 20;
+}
+.g-over.show { opacity: 1; pointer-events: auto; }
+.g-over-card {
+  background: #14161e; border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 16px; padding: 32px 40px; text-align: center; max-width: 360px;
+  box-shadow: 0 20px 60px -20px rgba(0,0,0,0.85);
+}
+.g-over-emoji { font-size: 48px; margin-bottom: 8px; }
+.g-over-card h2 { font-size: 24px; margin-bottom: 8px; color: var(--fg); }
+.g-over-card p  { font-size: 13px; color: var(--fg-dim); margin-bottom: 20px; line-height: 1.5; }
+.g-over-actions { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+
+.g-controls {
+  position: absolute; bottom: 14px; right: 14px;
+  display: flex; gap: 8px; align-items: center; flex-wrap: wrap; z-index: 10;
+}
+.g-btn {
+  background: rgba(10, 11, 16, 0.82); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 8px;
+  padding: 8px 14px; color: var(--fg); font-size: 12px; cursor: pointer;
+  font-family: var(--mono); transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+.g-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.22); }
+.g-btn.active {
+  background: rgba(255, 92, 51, 0.18);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.g-btn-primary { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 700; }
+.g-btn-primary:hover { background: var(--accent-dim); border-color: var(--accent-dim); color: #000; }
+
+/* ═══════════════════════════════════════════════════════════
+   Maze specifics
+   ═══════════════════════════════════════════════════════════ */
+.maze-timer { font-size: 16px; font-weight: 600; color: var(--accent); }
+.maze-best  { color: var(--fg); font-weight: 600; }
+.maze-badge {
+  background: var(--accent); color: #000; border-radius: 4px;
+  padding: 2px 6px; font-size: 9px; font-weight: 700; letter-spacing: 0.06em;
+}
+.maze-hint {
+  position: absolute; top: 72px; left: 50%; transform: translateX(-50%);
+  background: rgba(10, 11, 16, 0.82); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1); border-radius: 8px;
+  padding: 8px 16px; font-size: 13px; color: var(--fg-dim);
+  pointer-events: none; transition: opacity 0.5s; white-space: nowrap;
+}
+.maze-hint.fade { opacity: 0; }
+.maze-best-line { font-family: var(--mono); font-size: 12px; color: var(--fg-dim); margin-bottom: 20px; }
+.maze-check {
+  background: rgba(10, 11, 16, 0.82); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 8px;
+  padding: 8px 14px; font-size: 12px; color: var(--fg); cursor: pointer;
+  display: flex; align-items: center; gap: 6px; font-family: var(--mono);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   Heist specifics
+   ═══════════════════════════════════════════════════════════ */
+.heist-detect-pill { flex-direction: column; align-items: stretch; min-width: 136px; gap: 4px; }
+.heist-detect-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.heist-state-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.05em; color: #4caf50; }
+.heist-detect-bar {
+  height: 6px; background: rgba(255,255,255,0.1);
+  border-radius: 3px; overflow: hidden;
+}
+.heist-detect-fill { height: 100%; width: 0%; background: #4caf50; transition: background 0.15s; }
+
+/* ═══════════════════════════════════════════════════════════
+   Racer specifics
+   ═══════════════════════════════════════════════════════════ */
+.racer-speed { font-size: 16px; font-weight: 700; color: var(--accent); }
+.racer-time  { font-size: 16px; font-weight: 600; color: var(--fg); }
+.racer-dist  { font-size: 14px; font-weight: 600; color: var(--fg); }
+.racer-grip-bar {
+  width: 68px; height: 6px; background: rgba(255,255,255,0.12);
+  border-radius: 3px; overflow: hidden;
+}
+.racer-grip-fill { height: 100%; width: 100%; background: #4fc3f7; transition: background 0.15s; }
+
+/* ═══════════════════════════════════════════════════════════
+   Toast
+   ═══════════════════════════════════════════════════════════ */
+.toast {
+  position: fixed; bottom: 32px; left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--accent); color: #000; padding: 10px 20px; border-radius: 8px;
+  font-weight: 600; font-size: 14px; opacity: 0;
+  transition: opacity 0.2s, transform 0.2s; z-index: 1000; pointer-events: none;
+  box-shadow: 0 8px 24px -8px rgba(255, 92, 51, 0.6);
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* ═══════════════════════════════════════════════════════════
+   Mobile
+   ═══════════════════════════════════════════════════════════ */
+@media (max-width: 640px) {
+  .hub-title { font-size: 32px; }
+  .hub-sub   { font-size: 15px; }
+  .g-hud     { padding: 10px; gap: 6px; }
+  .g-pill    { padding: 6px 10px; font-size: 11px; }
+  .g-msg, .maze-hint { top: 58px; font-size: 11px; padding: 6px 12px; }
+  .g-over-card { padding: 24px 28px; }
+  .g-controls { bottom: 10px; right: 10px; left: 10px; justify-content: flex-end; }
+  .game-note { font-size: 11px; }
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Heist - ForgeNoise</title>
+  <meta name="description" content="Stealth game - sneak past noise-driven guards.">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/main-256.ico">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="games.css">
+</head>
+<body class="game-body">
+  <header>
+    <nav>
+  <a href="../index.html" class="brand">ForgeNoise</a>
+  <a href="../demo.html">Demo</a>
+  <a href="index.html">Games</a>
+  <a href="../api.html">API</a>
+  <a href="../benchmark.html">Benchmark</a>
+  <a href="https://github.com/cmdaeo/ForgeNoise" class="gh">GitHub</a>
+</nav>
+  </header>
+
+  <main class="game-main">
+    <div class="game-stage" id="heist-stage">
+      <canvas id="heist-canvas"></canvas>
+
+      <div class="g-hud">
+        <div class="g-hud-group">
+          <div class="g-pill">
+            <span class="g-label">Vault</span>
+            <span style="font-weight:600" id="heist-seed">#-</span>
+          </div>
+          <div class="g-pill">
+            <span class="g-label">Gems</span>
+            <span style="font-weight:700;color:#ffd54f" id="heist-gem">0 / 3</span>
+          </div>
+        </div>
+        <div class="g-pill heist-detect-pill">
+          <div class="heist-detect-top">
+            <span class="g-label">Guards</span>
+            <span class="heist-state-tag" id="heist-state">PATROL</span>
+          </div>
+          <div class="heist-detect-bar">
+            <div class="heist-detect-fill" id="heist-detect-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-msg" id="heist-msg">💎 Steal all 3 gems & reach the exit · [Shift] Sprint · [E] Decoy sound</div>
+
+      <div class="g-over" id="heist-over">
+        <div class="g-over-card">
+          <div class="g-over-emoji" id="heist-emoji">💀</div>
+          <h2 id="heist-title">Caught!</h2>
+          <p id="heist-sub">A guard tracked you down.</p>
+          <div class="g-over-actions">
+            <button class="g-btn g-btn-primary" id="heist-retry">Try again</button>
+            <button class="g-btn" id="heist-next">New level</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-controls">
+        <button class="g-btn" id="heist-decoy" title="Make a noise ripple to lure nearby guards">🔊 Decoy [E]</button>
+        <button class="g-btn" id="heist-field" title="Visualize the live ForgeNoise curiosity field">🌊 Noise Field [V]</button>
+        <button class="g-btn" id="heist-new">New level [Space]</button>
+      </div>
+    </div>
+
+    <p class="game-note">
+      No A* state machines: guards navigate via a live ForgeNoise potential field, raycast vision cones against walls, and use turbulent Simplex spirals to investigate where they last saw or heard you.
+    </p>
+  </main>
+
+  <script src="../dist/forgeNoise.min.js"></script>
+  <script src="heist.js"></script>
+</body>
+</html>

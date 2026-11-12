@@ -1,13 +1,13 @@
 'use strict';
 // scripts/generate-api-data.js
-// Parses forgeNoise.js as the single source of truth for the API page.
+// Parses ForgeNoise.js as the single source of truth for the API page.
 // Run: node scripts/generate-api-data.js
 
 const fs   = require('fs');
 const path = require('path');
 
 const root = path.join(__dirname, '..');
-const src  = fs.readFileSync(path.join(root, 'forgeNoise.js'), 'utf8');
+const src  = fs.readFileSync(path.join(root, 'ForgeNoise.js'), 'utf8');
 const lines = src.split('\n');
 
 // ── 1. Scan source: every ForgeNoise.prototype.X or ForgeNoise.X ───
@@ -210,4 +210,4 @@ const js =
 
 fs.writeFileSync(path.join(root, 'docs', 'api-data.js'), js);
 const total = out.reduce((s, g) => s + g.items.length, 0);
-console.log(`Wrote web/api-data.js - ${out.length} categories, ${total} methods`);
+console.log(`Wrote docs/api-data.js - ${out.length} categories, ${total} methods`);

@@ -1,0 +1,38 @@
+{
+  "seeds": 20,
+  "grid": 128,
+  "extent": 6,
+  "gaussian_saddle_ratio_expected": 2,
+  "results": [
+    {
+      "algorithm": "simplex2d",
+      "mean_peaks": 240.9,
+      "mean_valleys": 238.2,
+      "mean_saddles": 473.1,
+      "std_saddles": 8.395832299420944,
+      "saddle_ratio": 1.9749530369360262,
+      "mean_density": 6.612499999999999,
+      "std_density": 0.10233576122104797
+    },
+    {
+      "algorithm": "perlin2d",
+      "mean_peaks": 110.95,
+      "mean_valleys": 111.55,
+      "mean_saddles": 219.7,
+      "std_saddles": 10.895411878400925,
+      "saddle_ratio": 1.974831460656406,
+      "mean_density": 3.0708333333333337,
+      "std_density": 0.12664047000060963
+    },
+    {
+      "algorithm": "os2f_2d",
+      "mean_peaks": 247.5,
+      "mean_valleys": 247.6,
+      "mean_saddles": 488,
+      "std_saddles": 6.870225614927067,
+      "saddle_ratio": 1.9713189254616388,
+      "mean_density": 6.827083333333334,
+      "std_density": 0.0763541587716635
+    }
+  ]
+}

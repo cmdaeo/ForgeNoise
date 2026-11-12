@@ -1,0 +1,291 @@
+{
+  "resolution": 512,
+  "coord_scale": 4,
+  "euclidean_cv": 0.10576800555236587,
+  "hyperbolic_cv": 0.3058000620605118,
+  "euclidean_gradient_log_slope": 0.0347796991631161,
+  "predicted_slope": -1,
+  "hypothesis_hyperbolic_constant": false,
+  "rows": [
+    {
+      "r": "0.0200",
+      "rho_hyp": "0.0400",
+      "mean_eucl_grad": "22.300485",
+      "mean_hyp_grad": "11.145782",
+      "metric_factor": "0.499800"
+    },
+    {
+      "r": "0.0441",
+      "rho_hyp": "0.0883",
+      "mean_eucl_grad": "14.639523",
+      "mean_hyp_grad": "7.305524",
+      "metric_factor": "0.499027"
+    },
+    {
+      "r": "0.0682",
+      "rho_hyp": "0.1366",
+      "mean_eucl_grad": "9.303518",
+      "mean_hyp_grad": "4.630119",
+      "metric_factor": "0.497674"
+    },
+    {
+      "r": "0.0923",
+      "rho_hyp": "0.1851",
+      "mean_eucl_grad": "9.972776",
+      "mean_hyp_grad": "4.943901",
+      "metric_factor": "0.495740"
+    },
+    {
+      "r": "0.1164",
+      "rho_hyp": "0.2339",
+      "mean_eucl_grad": "9.482275",
+      "mean_hyp_grad": "4.676889",
+      "metric_factor": "0.493224"
+    },
+    {
+      "r": "0.1405",
+      "rho_hyp": "0.2829",
+      "mean_eucl_grad": "8.798385",
+      "mean_hyp_grad": "4.312336",
+      "metric_factor": "0.490128"
+    },
+    {
+      "r": "0.1646",
+      "rho_hyp": "0.3323",
+      "mean_eucl_grad": "10.075085",
+      "mean_hyp_grad": "4.901034",
+      "metric_factor": "0.486451"
+    },
+    {
+      "r": "0.1887",
+      "rho_hyp": "0.3820",
+      "mean_eucl_grad": "12.128412",
+      "mean_hyp_grad": "5.848233",
+      "metric_factor": "0.482193"
+    },
+    {
+      "r": "0.2128",
+      "rho_hyp": "0.4322",
+      "mean_eucl_grad": "12.899795",
+      "mean_hyp_grad": "6.157765",
+      "metric_factor": "0.477354"
+    },
+    {
+      "r": "0.2369",
+      "rho_hyp": "0.4830",
+      "mean_eucl_grad": "12.115709",
+      "mean_hyp_grad": "5.717812",
+      "metric_factor": "0.471934"
+    },
+    {
+      "r": "0.2610",
+      "rho_hyp": "0.5344",
+      "mean_eucl_grad": "10.144397",
+      "mean_hyp_grad": "4.726607",
+      "metric_factor": "0.465933"
+    },
+    {
+      "r": "0.2851",
+      "rho_hyp": "0.5865",
+      "mean_eucl_grad": "9.290836",
+      "mean_hyp_grad": "4.267755",
+      "metric_factor": "0.459351"
+    },
+    {
+      "r": "0.3092",
+      "rho_hyp": "0.6394",
+      "mean_eucl_grad": "9.356959",
+      "mean_hyp_grad": "4.231106",
+      "metric_factor": "0.452188"
+    },
+    {
+      "r": "0.3333",
+      "rho_hyp": "0.6931",
+      "mean_eucl_grad": "9.977679",
+      "mean_hyp_grad": "4.434524",
+      "metric_factor": "0.444444"
+    },
+    {
+      "r": "0.3574",
+      "rho_hyp": "0.7479",
+      "mean_eucl_grad": "10.368001",
+      "mean_hyp_grad": "4.521691",
+      "metric_factor": "0.436120"
+    },
+    {
+      "r": "0.3815",
+      "rho_hyp": "0.8037",
+      "mean_eucl_grad": "10.723490",
+      "mean_hyp_grad": "4.581227",
+      "metric_factor": "0.427214"
+    },
+    {
+      "r": "0.4056",
+      "rho_hyp": "0.8608",
+      "mean_eucl_grad": "10.199253",
+      "mean_hyp_grad": "4.260510",
+      "metric_factor": "0.417728"
+    },
+    {
+      "r": "0.4297",
+      "rho_hyp": "0.9192",
+      "mean_eucl_grad": "10.344226",
+      "mean_hyp_grad": "4.216929",
+      "metric_factor": "0.407660"
+    },
+    {
+      "r": "0.4538",
+      "rho_hyp": "0.9791",
+      "mean_eucl_grad": "9.210670",
+      "mean_hyp_grad": "3.656745",
+      "metric_factor": "0.397012"
+    },
+    {
+      "r": "0.4779",
+      "rho_hyp": "1.0406",
+      "mean_eucl_grad": "8.440300",
+      "mean_hyp_grad": "3.256120",
+      "metric_factor": "0.385783"
+    },
+    {
+      "r": "0.5021",
+      "rho_hyp": "1.1041",
+      "mean_eucl_grad": "10.250578",
+      "mean_hyp_grad": "3.833432",
+      "metric_factor": "0.373972"
+    },
+    {
+      "r": "0.5262",
+      "rho_hyp": "1.1696",
+      "mean_eucl_grad": "11.230811",
+      "mean_hyp_grad": "4.060849",
+      "metric_factor": "0.361581"
+    },
+    {
+      "r": "0.5503",
+      "rho_hyp": "1.2375",
+      "mean_eucl_grad": "10.122103",
+      "mean_hyp_grad": "3.528655",
+      "metric_factor": "0.348609"
+    },
+    {
+      "r": "0.5744",
+      "rho_hyp": "1.3080",
+      "mean_eucl_grad": "9.244281",
+      "mean_hyp_grad": "3.097351",
+      "metric_factor": "0.335056"
+    },
+    {
+      "r": "0.5985",
+      "rho_hyp": "1.3815",
+      "mean_eucl_grad": "9.262195",
+      "mean_hyp_grad": "2.972441",
+      "metric_factor": "0.320922"
+    },
+    {
+      "r": "0.6226",
+      "rho_hyp": "1.4584",
+      "mean_eucl_grad": "10.169693",
+      "mean_hyp_grad": "3.114031",
+      "metric_factor": "0.306207"
+    },
+    {
+      "r": "0.6467",
+      "rho_hyp": "1.5391",
+      "mean_eucl_grad": "10.400539",
+      "mean_hyp_grad": "3.025632",
+      "metric_factor": "0.290911"
+    },
+    {
+      "r": "0.6708",
+      "rho_hyp": "1.6243",
+      "mean_eucl_grad": "9.892389",
+      "mean_hyp_grad": "2.720747",
+      "metric_factor": "0.275034"
+    },
+    {
+      "r": "0.6949",
+      "rho_hyp": "1.7146",
+      "mean_eucl_grad": "11.304898",
+      "mean_hyp_grad": "2.923182",
+      "metric_factor": "0.258577"
+    },
+    {
+      "r": "0.7190",
+      "rho_hyp": "1.8110",
+      "mean_eucl_grad": "12.726095",
+      "mean_hyp_grad": "3.073835",
+      "metric_factor": "0.241538"
+    },
+    {
+      "r": "0.7431",
+      "rho_hyp": "1.9146",
+      "mean_eucl_grad": "11.628578",
+      "mean_hyp_grad": "2.603852",
+      "metric_factor": "0.223918"
+    },
+    {
+      "r": "0.7672",
+      "rho_hyp": "2.0269",
+      "mean_eucl_grad": "10.058663",
+      "mean_hyp_grad": "2.069246",
+      "metric_factor": "0.205718"
+    },
+    {
+      "r": "0.7913",
+      "rho_hyp": "2.1497",
+      "mean_eucl_grad": "10.421530",
+      "mean_hyp_grad": "1.948163",
+      "metric_factor": "0.186936"
+    },
+    {
+      "r": "0.8154",
+      "rho_hyp": "2.2858",
+      "mean_eucl_grad": "11.648283",
+      "mean_hyp_grad": "1.951949",
+      "metric_factor": "0.167574"
+    },
+    {
+      "r": "0.8395",
+      "rho_hyp": "2.4389",
+      "mean_eucl_grad": "11.321964",
+      "mean_hyp_grad": "1.671469",
+      "metric_factor": "0.147631"
+    },
+    {
+      "r": "0.8636",
+      "rho_hyp": "2.6146",
+      "mean_eucl_grad": "10.273912",
+      "mean_hyp_grad": "1.305880",
+      "metric_factor": "0.127106"
+    },
+    {
+      "r": "0.8877",
+      "rho_hyp": "2.8219",
+      "mean_eucl_grad": "10.497715",
+      "mean_hyp_grad": "1.112770",
+      "metric_factor": "0.106001"
+    },
+    {
+      "r": "0.9118",
+      "rho_hyp": "3.0761",
+      "mean_eucl_grad": "11.473511",
+      "mean_hyp_grad": "0.967390",
+      "metric_factor": "0.084315"
+    },
+    {
+      "r": "0.9359",
+      "rho_hyp": "3.4078",
+      "mean_eucl_grad": "11.102093",
+      "mean_hyp_grad": "0.688863",
+      "metric_factor": "0.062048"
+    },
+    {
+      "r": "0.9600",
+      "rho_hyp": "3.8918",
+      "mean_eucl_grad": "10.438924",
+      "mean_hyp_grad": "0.409206",
+      "metric_factor": "0.039200"
+    }
+  ]
+}

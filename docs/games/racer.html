@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Racer - ForgeNoise</title>
+  <meta name="description" content="Endless procedural racer - how long can you survive?">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/main-256.ico">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="games.css">
+</head>
+<body class="game-body">
+  <header>
+    <nav>
+  <a href="../index.html" class="brand">ForgeNoise</a>
+  <a href="../demo.html">Demo</a>
+  <a href="index.html">Games</a>
+  <a href="../api.html">API</a>
+  <a href="../benchmark.html">Benchmark</a>
+  <a href="https://github.com/cmdaeo/ForgeNoise" class="gh">GitHub</a>
+</nav>
+  </header>
+
+  <main class="game-main">
+    <div class="game-stage" id="racer-stage">
+      <canvas id="racer-canvas"></canvas>
+
+      <div class="g-hud">
+        <div class="g-hud-group">
+          <div class="g-pill">
+            <span class="g-label">Speed</span>
+            <span class="racer-speed" id="racer-speed">0 km/h</span>
+          </div>
+          <div class="g-pill">
+            <span class="g-label">Shield</span>
+            <div class="racer-grip-bar">
+              <div class="racer-grip-fill" id="racer-grip-fill"></div>
+            </div>
+          </div>
+        </div>
+        <div class="g-hud-group">
+          <div class="g-pill">
+            <span class="g-label">Time</span>
+            <span class="racer-time" id="racer-time">0.0s</span>
+          </div>
+          <div class="g-pill">
+            <span class="g-label">Dist</span>
+            <span class="racer-dist" id="racer-dist">0m</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-msg" id="racer-msg">← → Steer · ↑ Boost · ↓ Brake/Drift · Thread traffic for Near-Miss boosts!</div>
+
+      <div class="g-over" id="racer-over">
+        <div class="g-over-card">
+          <div class="g-over-emoji" id="racer-emoji">💥</div>
+          <h2 id="racer-title">Wrecked!</h2>
+          <p id="racer-sub"></p>
+          <div class="g-over-actions">
+            <button class="g-btn g-btn-primary" id="racer-retry">Try again</button>
+            <button class="g-btn" id="racer-new">New road</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-controls">
+        <button class="g-btn" id="racer-new2">New road [Space]</button>
+      </div>
+    </div>
+
+    <p class="game-note">
+      Road curvature, 3D hill elevation, mountain horizons, and NPC lane-weaving are all sampled continuously from 1D ForgeNoise.
+    </p>
+  </main>
+
+  <script src="../dist/forgeNoise.min.js"></script>
+  <script src="racer.js"></script>
+</body>
+</html>

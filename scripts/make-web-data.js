@@ -1,5 +1,5 @@
 'use strict';
-// scripts/make-web-data.js - bench/results.json → web/bench-data.js
+// scripts/make-web-data.js - bench/results.json → docs/bench-data.js
 const fs   = require('fs');
 const path = require('path');
 
@@ -26,7 +26,7 @@ const js =
   'window.BENCH = ' + JSON.stringify(compact) + ';\n';
 
 fs.writeFileSync(outPath, js);
-console.log(`Wrote web/bench-data.js - ${compact.table.length} rows, ${compact.trials} trials`);
+console.log(`Wrote docs/bench-data.js - ${compact.table.length} rows, ${compact.trials} trials`);
 
 if (!compact.system || !compact.system.cpu) {
   console.warn('⚠ bench/results.json has no system info - was it produced by the updated bench/runner.js?');

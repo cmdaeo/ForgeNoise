@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440">
+<rect width="720" height="440" fill="#ffffff" />
+<rect x="90" y="60" width="590" height="280" fill="#fafafa" stroke="#ccc" stroke-width="1" />
+<line x1="90" y1="340" x2="680" y2="340" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="344" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">0</text>
+<line x1="90" y1="270" x2="680" y2="270" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="274" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">2</text>
+<line x1="90" y1="200" x2="680" y2="200" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="204" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">4</text>
+<line x1="90" y1="130" x2="680" y2="130" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="134" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">6</text>
+<line x1="90" y1="60" x2="680" y2="60" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="64" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">8</text>
+<rect x="129.33333333333331" y="108.56250000000003" width="117.99999999999999" height="231.43749999999997" fill="#222" stroke="none" stroke-width="1" />
+<text x="188.33333333333331" y="100.56250000000003" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#000" font-weight="bold">6.61</text>
+<text x="188.33333333333331" y="362" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#000" font-weight="bold">Simplex</text>
+<text x="188.33333333333331" y="380" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#888" font-weight="normal">saddle/peak = 1.975</text>
+<rect x="325.99999999999994" y="232.52083333333331" width="117.99999999999999" height="107.47916666666669" fill="#e05c33" stroke="none" stroke-width="1" />
+<text x="384.99999999999994" y="224.52083333333331" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#000" font-weight="bold">3.07</text>
+<text x="384.99999999999994" y="362" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#000" font-weight="bold">Perlin</text>
+<text x="384.99999999999994" y="380" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#888" font-weight="normal">saddle/peak = 1.975</text>
+<rect x="522.6666666666666" y="101.05208333333331" width="117.99999999999999" height="238.94791666666669" fill="#1a7aff" stroke="none" stroke-width="1" />
+<text x="581.6666666666666" y="93.05208333333331" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#000" font-weight="bold">6.83</text>
+<text x="581.6666666666666" y="362" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#000" font-weight="bold">OS2F</text>
+<text x="581.6666666666666" y="380" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#888" font-weight="normal">saddle/peak = 1.971</text>
+<text x="385" y="420" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#000" font-weight="bold">Algorithm</text>
+<text x="22" y="200" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000" transform="rotate(-90 22 200)">Critical points per unit²</text>
+<text x="90" y="30" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="start" fill="#000" font-weight="bold">Critical-point density discriminates 2.2×</text>
+<text x="90" y="48" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" fill="#666" font-weight="normal">Saddle/peak ratio is universal (~1.97) across all three</text>
+</svg>

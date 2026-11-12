@@ -1,16 +1,16 @@
 {
   "name": "forge-noise",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A high-performance noise generation library",
   "scripts": {
     "test": "mocha",
-    "build": "terser forgeNoise.js -c -m -o dist/forgeNoise.min.js",
+    "build": "terser ForgeNoise.js -c -m -o dist/ForgeNoise.min.js",
     "build:web": "node scripts/generate-api-data.js && node scripts/make-web-data.js && node scripts/copy-dist.js",
     "bench": "node bench/runner.js",
     "bench:quick": "TRIALS=3 node bench/runner.js",
     "release:web": "npm run build && npm run build:web"
   },
-  "main": "dist/forgeNoise.min.js",
+  "main": "dist/ForgeNoise.min.js",
   "files": [
     "dist/"
   ],
@@ -24,12 +24,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cmdaeo/forgeNoise.git"
+    "url": "https://github.com/cmdaeo/ForgeNoise.git"
   },
   "bugs": {
-    "url": "https://github.com/cmdaeo/forgeNoise/issues"
+    "url": "https://github.com/cmdaeo/ForgeNoise/issues"
   },
-  "homepage": "https://github.com/cmdaeo/forgeNoise#readme",
+  "homepage": "https://github.com/cmdaeo/ForgeNoise#readme",
   "overrides": {
     "serialize-javascript": "^7.1.2",
     "diff": "^8.0.3",

@@ -4,10 +4,10 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
-[**Live Demo**](https://cmdaeo.github.io/forgeNoise/demo.html) ·
-[**API Reference**](https://cmdaeo.github.io/forgeNoise/api.html) ·
-[**Benchmarks**](https://cmdaeo.github.io/forgeNoise/benchmark.html) ·
-[**GitHub**](https://github.com/cmdaeo/forgeNoise)
+[**Live Demo**](https://cmdaeo.github.io/ForgeNoise/demo.html) ·
+[**API Reference**](https://cmdaeo.github.io/ForgeNoise/api.html) ·
+[**Benchmarks**](https://cmdaeo.github.io/ForgeNoise/benchmark.html) ·
+[**GitHub**](https://github.com/cmdaeo/ForgeNoise)
 
 ---
 
@@ -18,15 +18,15 @@ Perlin, Simplex, OpenSimplex2 (F & S), Value, Worley, Voronoi, configurable cell
 Drop it in with a `<script>` tag from jsDelivr (pulls directly from GitHub):
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/cmdaeo/forgeNoise@main/dist/forgeNoise.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cmdaeo/ForgeNoise@main/dist/ForgeNoise.min.js"></script>
 ```
 
-Or download `dist/forgeNoise.min.js` directly from this repository and include it locally.
+Or download `dist/ForgeNoise.min.js` directly from this repository and include it locally.
 
 For production, pin to a specific tag or commit SHA instead of `@main` so CDN caching can't serve you a stale build:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/cmdaeo/forgeNoise@v1.1.0/dist/forgeNoise.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cmdaeo/ForgeNoise@v1.1.0/dist/ForgeNoise.min.js"></script>
 ```
 
 > **Note:** jsDelivr caches `@main` branch references for up to 12 hours. If you just pushed an update and the CDN still serves the old file, either wait or [purge the cache](https://www.jsdelivr.com/tools/purge).
@@ -81,7 +81,7 @@ noise.warp2D(x, y, { warpStrength: 2, warpScale: 1.5 });
 ### Design
 
 - **Seedable** - `new ForgeNoise(seed)` reproduces exactly; `reseed(seed)` re-uses the instance.
-- **No allocations** on the hot path. Optional `out` arrays for the few methods that could otherwise allocate.
+- **No allocations**: optional `out` parameters for the few methods that would otherwise allocate.
 - **Uniform output range** - `[-1, 1]` everywhere, `[0, 1]` for `*01` variants.
 - **No dependencies**, single file.
 - **UMD** - works with a plain `<script>` tag, or `require()` / `import` if you bundle it.
@@ -93,7 +93,7 @@ Measured on an AMD Ryzen 5 3500U, Node 24.15, V8 13.6, 7 trials per category, ro
 | Category | ForgeNoise | Competitor | Ratio |
 |---|---:|---:|---:|
 | **Simplex 2D** | 40,940,793 | `simplex-noise` 20,204,578 | **2.03×** |
-| **Simplex 3D** | 15,327,358 | `simplex-noise` 13,260,554 | **1.16×** |
+| **Simplex 3D** | 15,327,358 | `simplex-noise` 13,260,554 | 1.16× (marginal) |
 | Simplex 4D | 7,366,274 | `simplex-noise` 7,482,144 | 0.98× (tied) |
 | **Perlin 2D** | 81,320,086 | `noisejs` 61,834,862 | **1.31×** |
 | **Perlin 3D** | 19,675,765 | `noisejs` 17,038,556 | **1.15×** |
@@ -104,7 +104,7 @@ Measured on an AMD Ryzen 5 3500U, Node 24.15, V8 13.6, 7 trials per category, ro
 | **Fractal (Simplex) 2D** | 6,825,701 | `fastnoise-lite` 4,335,152 | **1.57×** |
 | **Fractal (Simplex) 3D** | 4,931,055 | `fastnoise-lite` 2,072,440 | **2.38×** |
 
-10 wins, 1 tie, 0 losses. Full methodology and per-test data (CPU %, RSS, p50/p95/p99 latency, 95 % CIs) at the [benchmark page](https://cmdaeo.github.io/forgeNoise/benchmark.html). Reproduce locally with `npm run bench`.
+9 clear wins, 1 marginal (Simplex 3D - CIs overlap slightly), 1 tie, 0 losses. Full methodology and per-test data (CPU %, RSS, p50/p95/p99 latency, 95 % CIs) at the [benchmark page](https://cmdaeo.github.io/ForgeNoise/benchmark.html). Reproduce locally with `npm run bench`.
 
 ## Examples
 
@@ -155,7 +155,7 @@ noise.generateSimplexFractal2D_Derivative(x, y, grad, { octaves: 5 });
 
 ## API
 
-Full reference at the [API page](https://cmdaeo.github.io/forgeNoise/api.html), generated automatically from `forgeNoise.js` source comments. To add documentation for a method, put a `//` or `/** */` comment above its `ForgeNoise.prototype.X = function...` line:
+Full reference at the [API page](https://cmdaeo.github.io/ForgeNoise/api.html), generated automatically from `ForgeNoise.js` source comments. To add documentation for a method, put a `//` or `/** */` comment above its `ForgeNoise.prototype.X = function...` line:
 
 ```js
 // @range [-1, 1]
@@ -172,15 +172,15 @@ Works in any browser with typed arrays: Chrome, Firefox, Safari, Edge - every ve
 ## Development
 
 ```bash
-git clone https://github.com/cmdaeo/forgeNoise.git
-cd forgeNoise
+git clone https://github.com/cmdaeo/ForgeNoise.git
+cd ForgeNoise
 npm install
 
 npm test                # mocha - 30 s
 npm run bench:quick     # 3-trial benchmark (~20 min)
 npm run bench           # 7-trial definitive run (~45 min)
 
-npm run build           # minify forgeNoise.js → dist/forgeNoise.min.js
+npm run build           # minify ForgeNoise.js → dist/ForgeNoise.min.js
 npm run build:web       # regen docs/api-data.js, docs/bench-data.js, docs/dist/
 npx serve docs          # static server on http://localhost:3000
 ```

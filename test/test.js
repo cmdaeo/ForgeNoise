@@ -1,5 +1,5 @@
 const assert = require('assert');
-const ForgeNoise = require('../dist/forgeNoise.min.js');
+const ForgeNoise = require('../dist/ForgeNoise.min.js');
 
 describe('ForgeNoise', function () {
     this.timeout(5000);

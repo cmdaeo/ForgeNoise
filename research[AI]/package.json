@@ -1,0 +1,15 @@
+{
+  "name": "forgenoise-research",
+  "private": true,
+  "scripts": {
+    "all": "node 01-warp-folding/run.js && node 02-critical-points/run.js && node 03-ridge-topology/run.js && node 04-isotropy/run.js && node 05-4d-time/run.js && node 06-hyperbolic/run.js && node 07-raycast/run.js",
+    "figures": "node figures/fig2-octave-scaling.js && node figures/fig3-lattice-fingerprint.js && node figures/fig4-critical-density.js && node figures/fig5-raycast-speedup.js && node figures/fig6-ridge-fragmentation.js",
+    "01": "node 01-warp-folding/run.js",
+    "02": "node 02-critical-points/run.js",
+    "03": "node 03-ridge-topology/run.js",
+    "04": "node 04-isotropy/run.js",
+    "05": "node 05-4d-time/run.js",
+    "06": "node 06-hyperbolic/run.js",
+    "07": "node 07-raycast/run.js"
+  }
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+<rect width="720" height="460" fill="#ffffff" />
+<rect x="90" y="60" width="470" height="330" fill="#fafafa" stroke="#ccc" stroke-width="1" />
+<line x1="90" y1="390" x2="560" y2="390" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="394" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">0</text>
+<line x1="90" y1="335" x2="560" y2="335" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="339" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">5</text>
+<line x1="90" y1="280" x2="560" y2="280" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="284" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">10</text>
+<line x1="90" y1="225" x2="560" y2="225" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="229" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">15</text>
+<line x1="90" y1="170" x2="560" y2="170" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="174" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">20</text>
+<line x1="90" y1="115" x2="560" y2="115" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="119" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">25</text>
+<line x1="90" y1="60" x2="560" y2="60" stroke="#eaeaea" stroke-width="1" />
+<text x="80" y="64" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="end" fill="#000" font-weight="normal">30</text>
+<line x1="120.743644852236" y1="60" x2="120.743644852236" y2="390" stroke="#eaeaea" stroke-width="1" />
+<text x="120.743644852236" y="410" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#000" font-weight="normal">1e-7</text>
+<line x1="222.871822426118" y1="60" x2="222.871822426118" y2="390" stroke="#eaeaea" stroke-width="1" />
+<text x="222.871822426118" y="410" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#000" font-weight="normal">1e-6</text>
+<line x1="325" y1="60" x2="325" y2="390" stroke="#eaeaea" stroke-width="1" />
+<text x="325" y="410" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#000" font-weight="normal">1e-5</text>
+<line x1="427.128177573882" y1="60" x2="427.128177573882" y2="390" stroke="#eaeaea" stroke-width="1" />
+<text x="427.128177573882" y="410" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#000" font-weight="normal">1e-4</text>
+<line x1="529.256355147764" y1="60" x2="529.256355147764" y2="390" stroke="#eaeaea" stroke-width="1" />
+<text x="529.256355147764" y="410" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#000" font-weight="normal">1e-3</text>
+<polyline points="529.26,258.00 325.00,181.00 120.74,104.00" stroke="#999" stroke-width="2" fill="none" />
+<circle cx="529.256355147764" cy="258" r="5" fill="#999" stroke="#fff" stroke-width="1.5" />
+<circle cx="325" cy="181" r="5" fill="#999" stroke="#fff" stroke-width="1.5" />
+<circle cx="120.743644852236" cy="104" r="5" fill="#999" stroke="#fff" stroke-width="1.5" />
+<polyline points="529.26,331.35 325.00,316.17 120.74,306.99" stroke="#e05c33" stroke-width="2" fill="none" />
+<circle cx="529.256355147764" cy="331.348" r="5" fill="#e05c33" stroke="#fff" stroke-width="1.5" />
+<circle cx="325" cy="316.168" r="5" fill="#e05c33" stroke="#fff" stroke-width="1.5" />
+<circle cx="120.743644852236" cy="306.994" r="5" fill="#e05c33" stroke="#fff" stroke-width="1.5" />
+<polyline points="529.26,363.12 325.00,358.06 120.74,355.00" stroke="#222" stroke-width="3" fill="none" />
+<circle cx="529.256355147764" cy="363.116" r="5" fill="#222" stroke="#fff" stroke-width="1.5" />
+<circle cx="325" cy="358.056" r="5" fill="#222" stroke="#fff" stroke-width="1.5" />
+<circle cx="120.743644852236" cy="354.998" r="5" fill="#222" stroke="#fff" stroke-width="1.5" />
+<line x1="580" y1="90" x2="604" y2="90" stroke="#999" stroke-width="2" />
+<circle cx="592" cy="90" r="4" fill="#999" stroke="none" stroke-width="1" />
+<text x="612" y="94" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" fill="#000" font-weight="normal">Bisection</text>
+<line x1="580" y1="116" x2="604" y2="116" stroke="#e05c33" stroke-width="2" />
+<circle cx="592" cy="116" r="4" fill="#e05c33" stroke="none" stroke-width="1" />
+<text x="612" y="120" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" fill="#000" font-weight="normal">Newton (finite-diff)</text>
+<line x1="580" y1="142" x2="604" y2="142" stroke="#222" stroke-width="3" />
+<circle cx="592" cy="142" r="4" fill="#222" stroke="none" stroke-width="1" />
+<text x="612" y="146" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" fill="#000" font-weight="normal">Newton (analytic)</text>
+<text x="325" y="440" font-family="Helvetica, Arial, sans-serif" font-size="13" text-anchor="middle" fill="#000" font-weight="bold">Tolerance ε</text>
+<text x="22" y="225" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#000" transform="rotate(-90 22 225)">Noise evaluations per ray</text>
+<text x="90" y="30" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="start" fill="#000" font-weight="bold">Raycasting cost: noise evaluations per ray</text>
+<text x="90" y="48" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="start" fill="#666" font-weight="normal">Newton with analytic gradient uses 4.9-8.2× fewer evaluations than bisection</text>
+</svg>

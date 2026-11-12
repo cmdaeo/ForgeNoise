@@ -7,7 +7,7 @@
     <meta property="og:title" content="ForgeNoise - Fast procedural noise for JavaScript">
   <meta property="og:description" content="Perlin, Simplex, OpenSimplex2, Worley, Voronoi, fractals, tiling, domain warping - dependency-free.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cmdaeo.github.io/forgeNoise/">
+  <meta property="og:url" content="https://cmdaeo.github.io/ForgeNoise/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ForgeNoise - Fast procedural noise for JavaScript">
   <meta name="twitter:description" content="Perlin, Simplex, OpenSimplex2, Worley, Voronoi, fractals, tiling, domain warping - dependency-free.">
@@ -22,12 +22,13 @@
 <body>
   <header>
     <nav>
-      <a href="index.html" class="brand">ForgeNoise</a>
-      <a href="demo.html">Demo</a>
-      <a href="api.html">API</a>
-      <a href="benchmark.html">Benchmark</a>
-      <a href="https://github.com/cmdaeo/forgeNoise" class="gh">GitHub</a>
-    </nav>
+  <a href="index.html" class="brand">ForgeNoise</a>
+  <a href="demo.html">Demo</a>
+  <a href="games/index.html">Games</a>
+  <a href="api.html">API</a>
+  <a href="benchmark.html">Benchmark</a>
+  <a href="https://github.com/cmdaeo/ForgeNoise" class="gh">GitHub</a>
+</nav>
   </header>
 
   <section class="hero">
@@ -36,18 +37,18 @@
     <h1>Procedural noise, but...<br> fast.</h1>
     <p>Perlin, Simplex, OpenSimplex2, Worley, Voronoi, fractals, tiling, and domain warping - one dependency-free library, in plain JavaScript.</p>
     <div class="cta">
-      <a href="demo.html" class="btn primary">Try in browser</a>
-      <a href="api.html" class="btn">View API</a>
-      <a href="benchmark.html" class="btn">See benchmarks</a>
-    </div>
+  <a href="games/index.html" class="btn primary">Play games</a>
+  <a href="demo.html" class="btn">Try in browser</a>
+  <a href="api.html" class="btn">View API</a>
+  <a href="benchmark.html" class="btn">See benchmarks</a>
+</div>
   </section>
 
   <main>
     <section>
       <h2>Install</h2>
-      <pre><code>npm install forge-noise</code></pre>
-      <p>Or from a CDN:</p>
-      <pre><code>&lt;script src="placeholder"&gt;&lt;/script&gt;</code></pre>
+      <p>From a CDN:</p>
+      <pre><code>&lt;script src="https://cdn.jsdelivr.net/gh/cmdaeo/ForgeNoise@main/dist/ForgeNoise.min.js"&gt;&lt;/script&gt;</code></pre>
       <p>Quick start:</p>
       <pre><code>const noise = new ForgeNoise(1337);
 const v = noise.generateSimplex2D(x, y);            // [-1, 1]
@@ -77,7 +78,7 @@ const f = noise.generateFractal2D(x, y, { octaves: 6 });</code></pre>
       <p>Against <code>simplex-noise</code>, <code>open-simplex-noise</code>, <code>fastnoise-lite</code>, and <code>noisejs</code>:</p>
       <ul class="algorithms">
         <li><strong>Simplex 2D</strong> - 2.03× faster than simplex-noise</li>
-        <li><strong>Simplex 3D</strong> - 1.16× faster; distributions don't overlap</li>
+        <li><strong>Simplex 3D</strong> - 1.16× faster (borderline - confidence intervals barely touch)</li>
         <li><strong>Simplex 4D</strong> - tied at 0.98× (±2 %, within noise)</li>
         <li><strong>Value 2D / 3D</strong> - 6× faster than fastnoise-lite</li>
         <li><strong>Worley 2D</strong> - 1.98× faster than fastnoise-lite</li>
@@ -87,10 +88,10 @@ const f = noise.generateFractal2D(x, y, { octaves: 6 });</code></pre>
   </main>
 
   <footer>
-    <p>MIT © cmdaeo · <a href="https://github.com/cmdaeo/forgeNoise">GitHub</a></p>
+    <p>MIT © cmdaeo · <a href="https://github.com/cmdaeo/ForgeNoise">GitHub</a></p>
   </footer>
 
-  <script src="dist/forgeNoise.min.js"></script>
+  <script src="dist/ForgeNoise.min.js"></script>
   <script src="hero.js"></script>
 </body>
 </html>

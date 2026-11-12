@@ -1,0 +1,22 @@
+{
+  "algorithm": "simplex2d",
+  "seeds": 100,
+  "resolution": 256,
+  "extent": 6,
+  "offset": [
+    5.2,
+    1.3
+  ],
+  "mean_s_crit": 0.12523020652793768,
+  "std_s_crit": 0.0073837904846086105,
+  "min_s_crit": 0.11400128217968722,
+  "max_s_crit": 0.14304437376424683,
+  "q05": 0.11439592207164029,
+  "q50": 0.12855001540619165,
+  "q95": 0.13449683010431196,
+  "hypothesis": {
+    "below_clean": true,
+    "above_dirty": true,
+    "monotone": true
+  }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Maze - ForgeNoise</title>
+  <meta name="description" content="Find your way out of a procedurally generated cave.">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/main-256.ico">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="games.css">
+</head>
+<body class="game-body">
+  <header>
+    <nav>
+  <a href="../index.html" class="brand">ForgeNoise</a>
+  <a href="../demo.html">Demo</a>
+  <a href="index.html">Games</a>
+  <a href="../api.html">API</a>
+  <a href="../benchmark.html">Benchmark</a>
+  <a href="https://github.com/cmdaeo/ForgeNoise" class="gh">GitHub</a>
+</nav>
+  </header>
+
+  <main class="game-main">
+    <div class="game-stage" id="cave-stage">
+      <canvas id="cave-canvas"></canvas>
+
+      <div class="g-hud">
+        <div class="g-pill">
+          <span class="g-label">Cave</span>
+          <span style="font-weight:600" id="cave-seed">#-</span>
+          <span class="maze-badge" id="cave-daily">TODAY</span>
+        </div>
+        <div class="g-pill">
+          <span class="g-label">Time</span>
+          <span class="maze-timer" id="cave-timer">0.0s</span>
+        </div>
+        <div class="g-pill">
+          <span class="g-label">Best</span>
+          <span class="maze-best" id="cave-best">-</span>
+        </div>
+      </div>
+
+      <div class="maze-hint" id="cave-hint">Find the glowing exit · [Shift] Dash · [E] Sonar pulse</div>
+
+      <div class="g-over" id="cave-win">
+        <div class="g-over-card">
+          <div class="g-over-emoji">🏁</div>
+          <h2>You made it!</h2>
+          <p style="font-family:var(--mono);font-size:28px;color:var(--accent);font-weight:700;margin:12px 0">
+            <span id="cave-win-time">0.0</span>s
+          </p>
+          <p class="maze-best-line" id="cave-win-best"></p>
+          <div class="g-over-actions">
+            <button class="g-btn g-btn-primary" id="cave-share">📤 Share</button>
+            <button class="g-btn" id="cave-next">Next cave →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-controls">
+        <button class="g-btn" id="cave-sonar" title="Send a sonar wave along the shortest path">📡 Sonar [E]</button>
+        <button class="g-btn" id="cave-new">New cave [Space]</button>
+        <label class="maze-check">
+          <input type="checkbox" id="cave-shaded" checked> Derivative Lit
+        </label>
+      </div>
+    </div>
+
+    <p class="game-note">
+      Cave topology, normal-mapped wall lighting, and ambient air currents are all computed from analytical ForgeNoise derivatives.
+    </p>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="../dist/forgeNoise.min.js"></script>
+  <script src="maze.js"></script>
+</body>
+</html>
