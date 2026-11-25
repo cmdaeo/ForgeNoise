@@ -8,7 +8,7 @@ falsify it. Results land in `results/` as CSV + JSON + PPM.
 ## Run order (each is independent)
 
 ```bash
-npm run build    # ensure dist/forgeNoise.min.js is up to date
+npm run build    # ensure dist/ForgeNoise.min.js is up to date
 node research/01-warp-folding/run.js
 node research/04-isotropy/run.js
 node research/02-critical-points/run.js
@@ -59,7 +59,6 @@ more than papers that p-hack.
 
 ## Known limitations
 
-- The `dist/` folder occasionally has filename case inconsistency (`forgeNoise.min.js` vs `ForgeNoise.min.js`). If `require` fails, check `ls dist/`.
 - OS2F / OS2S do not ship analytic derivatives; where needed, use central finite differences (`fdGrad` in `lib.js`).
 - Perlin does not ship an analytic derivative either; same caveat.
 - All `s_crit` results are for single-iteration uniform warp. Multi-iteration warp chains Jacobians (see `01-warp-folding/README`).

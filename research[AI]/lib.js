@@ -10,7 +10,7 @@ let ForgeNoise;
 try {
   ForgeNoise = require('../dist/ForgeNoise.min.js');
 } catch (e) {
-  console.error('Could not load dist/forgeNoise.min.js. Run `npm run build` first.');
+  console.error('Could not load dist/ForgeNoise.min.js. Run `npm run build` first.');
   console.error('Also check for case: `ls dist/` - filename may be ForgeNoise.min.js.');
   throw e;
 }
